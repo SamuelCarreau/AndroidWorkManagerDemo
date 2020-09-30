@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkManagerDemo.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="{Binding CalculationTime, StringFormat='{}Calculation Time : {0:T}'}"/>
+        <Label Text="{Binding NextCalculationTime, StringFormat='{}Next Calculation Time : {0:T}'}"/>
+        <Label Text="{Binding TaxResult, StringFormat='{}Tax return : {0:N2} $'}" />
+        <Button Text="Subcribe To Worker" Command="{Binding SubscribeCommand}"/>
+    </StackLayout>
+
+</ContentPage>
